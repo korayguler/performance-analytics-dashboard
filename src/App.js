@@ -14,9 +14,12 @@ function App() {
 
   useEffect(() => {
     apiCall();
+
     setInterval(() => {
       apiCall();
     }, 2000);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const apiCall = (e) => {
