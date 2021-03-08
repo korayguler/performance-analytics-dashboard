@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useState, useEffect } from 'react';
 import Chart from 'react-apexcharts';
 
@@ -40,7 +41,7 @@ const ApexChart = (props) => {
         categories: props.dates,
       },
     });
-  }, [props.dataset]);
+  }, [props]);
 
   const [series, SET_SERIES] = useState([]);
 
