@@ -15,9 +15,10 @@ function App() {
   useEffect(() => {
     apiCall();
 
+    // 2000ms apexcharts performans issue
     setInterval(() => {
       apiCall();
-    }, 2000);
+    }, 60000);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -26,7 +27,6 @@ function App() {
     $fetch(e)
       .then((response) => {
         const { body } = response.data;
-        console.log(body);
         setter(body);
       })
       .catch((e) => console.log(e));
@@ -60,7 +60,6 @@ function App() {
     if ($event === 'get30min' && typeof $event === 'string') {
       apiCall();
     } else if (typeof $event === 'object') {
-      console.log($event);
       apiCall($event);
     }
   };
