@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button, PageHeader, Descriptions } from 'antd';
 
 import './App.css';
 import App from './App';

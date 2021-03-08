@@ -12,9 +12,6 @@ function App() {
   const [files, SET_Files] = useState([]);
   const [dates, SET_dates] = useState([]);
 
-  const [currentCount, setCount] = useState(10);
-  const timer = () => setCount(currentCount - 1);
-
   useEffect(() => {
     apiCall();
     setInterval(() => {
